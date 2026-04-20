@@ -12,6 +12,14 @@ Run your desktop apps from game mode without switching to desktop.
 - **Recently opened** — non-library apps you've used are sorted to the top
 - **Crash recovery** — temporary shortcuts left behind by an unexpected shutdown are removed on next launch
 
+### Build
+
+```sh
+make       # install deps, build, and package into build/decky-volume-mixer.zip
+make build # install deps and build without packaging
+make clean # remove dist and build directories
+```
+
 ### Screenshots
 
 | Main View | Options |
