@@ -25,3 +25,9 @@ make clean # remove dist and build directories
 | Main View | Options |
 |:---------:|:-------:|
 | ![Main View](./assets/thumbnail.png) | ![Options](./assets/thumbnail-options.png) |
+
+### License
+
+This project is licensed under the GNU General Public License v3.0.
+
+Portions of this project were developed with reference to [decky-plugin-template](https://github.com/SteamDeckHomebrew/decky-plugin-template), which is licensed under the BSD 3-Clause License. See [LICENSE](./LICENSE) for the full license texts.
