@@ -1,5 +1,5 @@
 BUILD_DIR = build
-PLUGIN_NAME = decky-apps
+PLUGIN_NAME = decky-desktop-apps
 BUNDLE_ZIP_NAME = $(PLUGIN_NAME).zip
 
 .PHONY: clean build bundle

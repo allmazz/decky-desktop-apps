@@ -187,7 +187,7 @@ function Content() {
             );
 
             if (res2.ok)
-                toaster.toast({title: "Apps", body: "Shortcut created", critical: true});
+                toaster.toast({title: "Desktop Apps", body: "Shortcut created", critical: true});
             else
                 await tryOrToastAssert(removeShortcut, "Failed to remove new shortcut!", assertBool, res.result!.appId);
         } else if (!add && app.shortcut != null) {
@@ -233,7 +233,7 @@ function TitleView() {
     const [disabled, setDisabled] = useState(false);
     return (
         <Focusable style={{display: "flex", padding: 0, width: "100%", justifyContent: "space-between", paddingTop: "4px", paddingBottom: "4px"}}>
-            <div className={staticClasses.Title} style={{padding: 0}}>Apps</div>
+            <div className={staticClasses.Title} style={{padding: 0}}>Desktop Apps</div>
             <DialogButton
                 style={{height: '28px', width: '37px', minWidth: 0, padding: '10px 11px'}}
                 disabled={disabled}
@@ -252,7 +252,7 @@ function TitleView() {
 export default definePlugin(() => {
     cleanupTemporaryShortcuts();
     return {
-        name: "Apps",
+        name: "Desktop Apps",
         titleView: <TitleView/>,
         content: <Content/>,
         icon: <IoAppsSharp/>,

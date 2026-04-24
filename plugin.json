@@ -1,11 +1,11 @@
 {
-  "name": "Apps",
+  "name": "Desktop Apps",
   "author": "Kirill Nikiforov",
   "flags": [],
   "api_version": 1,
   "publish": {
     "tags": ["applications", "apps", "flatpak", "desktop"],
     "description": "Opens desktop apps without adding to Steam",
-    "image": "https://raw.githubusercontent.com/allmazz/decky-apps/main/assets/thumbnail.png"
+    "image": "https://raw.githubusercontent.com/allmazz/decky-desktop-apps/main/assets/thumbnail.png"
   }
 }

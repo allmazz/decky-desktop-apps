@@ -1,7 +1,7 @@
 import {toaster} from "@decky/api";
 import Logger from "@decky/ui/dist/logger";
 
-export const logger = new Logger("Apps");
+export const logger = new Logger("DesktopApps");
 
 type TryOrToastResult<T> = {ok: true, result: T} | {ok: false, result: undefined};
 export async function tryOrToast<T, A extends unknown[]>(
@@ -13,7 +13,7 @@ export async function tryOrToast<T, A extends unknown[]>(
         return {ok: true, result: await callback(...args)};
     } catch (e) {
         logger.error(msg, e);
-        toaster.toast({title: "Apps", body: msg, critical: true});
+        toaster.toast({title: "Desktop Apps", body: msg, critical: true});
         return {ok: false, result: undefined};
     }
 }
@@ -26,7 +26,7 @@ export async function tryOrToastAssert<T, A extends unknown[]>(
     const res = await tryOrToast(callback, msg, ...args);
     if (res.ok && !assert(res.result)) {
         logger.error(msg, "assertion failed", res)
-        toaster.toast({title: "Apps", body: msg, critical: true});
+        toaster.toast({title: "Desktop Apps", body: msg, critical: true});
         return {ok: false, result: undefined};
     }
 

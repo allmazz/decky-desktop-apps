@@ -1,5 +1,5 @@
 [project]
-name = "decky-apps"
+name = "decky-desktop-apps"
 version = "0.1.0"
 requires-python = ">=3.11"
 dependencies = []
