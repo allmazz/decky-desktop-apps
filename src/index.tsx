@@ -137,7 +137,8 @@ function Content() {
 
     const open = async (app: App) => {
         // failure here is not a reason to stop opening the app
-        await tryOrToast(setAppSetting, "Failed to update last opened time!", app.id, "lastOpened", Date.now());
+        const now = Date.now();
+        await trySetAppSettingAndUpdate(app.id, "lastOpened", now, a => a.lastOpened = now);
 
         if (app.shortcut == null) {
             const res = await tryOrToastAssert(
